@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <ApplicationIcon>Resource\RSAr2.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resource\copy.png" />
+    <None Remove="Resource\eraser.png" />
+    <None Remove="Resource\history.png" />
+    <None Remove="Resource\paste.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\RSAr2.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyPKITools\MyPKITools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\copy.png" />
+    <Resource Include="Resource\eraser.png" />
+    <Resource Include="Resource\history.png" />
+    <Resource Include="Resource\paste.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
